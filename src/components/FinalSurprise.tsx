@@ -50,7 +50,7 @@ export function FinalSurprise() {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const now = new Date();
-      // Target: May 20th of the current year
+      // Target: May 24th of the current year
       let targetDate = new Date(now.getFullYear(), 4, 20); // 4 = May (0-indexed)
       
       // If today is past May 24, set for next year (we don't want this mostly, but good fallback)
