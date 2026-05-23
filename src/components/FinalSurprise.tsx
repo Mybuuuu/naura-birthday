@@ -53,14 +53,14 @@ export function FinalSurprise() {
       // Target: May 20th of the current year
       let targetDate = new Date(now.getFullYear(), 4, 20); // 4 = May (0-indexed)
       
-      // If today is past May 20, set for next year (we don't want this mostly, but good fallback)
+      // If today is past May 24, set for next year (we don't want this mostly, but good fallback)
       if (now.getTime() > targetDate.getTime() + 86400000) {
         targetDate = new Date(now.getFullYear() + 1, 4, 20);
       }
 
       const difference = targetDate.getTime() - now.getTime();
 
-      // If it's the exact day (between 00:00 and 23:59 on May 20)
+      // If it's the exact day (between 00:00 and 23:59 on May 24)
       if (difference <= 0 && difference > -86400000) {
         setIsBirthday(true);
         setTimeLeft(null);
